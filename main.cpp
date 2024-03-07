@@ -1,71 +1,71 @@
 #include <iostream>
+#include <filesystem>
+#include <fstream>
 #include <string>
 #include <vector>
-#include <unordered_map>
+#include "./headers/nlohmann_json.hpp"
 
-// Structure to represent a command response with explanation
+using json = nlohmann::json;
+namespace fs = std::filesystem;
+
+// Structure to represent a command response with explanation and example
 struct CommandResponse {
     std::string response;
     std::string explanation;
+    std::string example;
 };
 
-// Structure to represent a command and its responses
-struct Command {
-    std::string name;
-    std::vector<CommandResponse> responses;
-};
+// Function to retrieve command from JSON
+std::vector<CommandResponse> getCommandFromJSON(const std::string& commandKeyword, const std::string& directory) {
+    std::vector<CommandResponse> commandResponses;
 
-// Function to retrieve command from array
-Command getCommandFromArray(const std::string& input) {
-    // Array of commands and their corresponding responses with explanations
-    std::unordered_map<std::string, Command> commandMap = {
-        {"move", {"mv", 
-            {
-                {"mv", "for moving file"},
-                {"mv -f", "force move"},
-                {"mv file/path/or/folderpath destination/path", "Move file or folder to destination path"}
+    for (const auto& entry : fs::recursive_directory_iterator(directory)) {
+        if (entry.is_regular_file() && entry.path().extension() == ".json") {
+            std::ifstream file(entry.path());
+            if (file.is_open()) {
+                json jsonData;
+                file >> jsonData;
+                file.close();
+
+                if (jsonData.contains(commandKeyword)) {
+                    for (const auto& response : jsonData[commandKeyword]) {
+                        commandResponses.push_back({
+                            response["response"],
+                            response["explanation"],
+                            response.value("example", "")
+                        });
+                    }
+                }
             }
-        }},
-        {"copy", {"cp",
-            {
-                {"cp", "for copying file"},
-                {"cp -r", "recursive copy"},
-                {"cp file/path/or/folderpath destination/path", "Copy file or folder to destination path"}
-            }
-        }},
-        {"delete", {"rm",
-            {
-                {"rm", "for deleting file"},
-                {"rm -r", "recursive delete"},
-                {"rm -f file/path", "Force delete file or folder"}
-            }
-        }},
-        // Add more commands as needed
-    };
-    
-    // Look up the command in the array
-    auto it = commandMap.find(input);
-    if (it != commandMap.end()) {
-        return it->second;
-    } else {
-        return {"", {}}; // Return empty command if not found
+        }
     }
+
+    return commandResponses;
 }
 
-int main() {
-    std::string userInput;
-    std::cout << "Enter command: ";
-    std::cin >> userInput;
-    
-    // Retrieve command from array
-    Command command = getCommandFromArray(userInput);
-    if (!command.name.empty()) {
-        std::cout << "Command found: " << command.name << std::endl;
-        for (const auto& response : command.responses) {
-            std::cout << response.response << " - " << response.explanation << std::endl;
+int main(int argc, char *argv[]) {
+    if (argc != 2) {
+        std::cerr << "Usage: " << argv[0] << " <command>" << std::endl;
+        return 1;
+    }
+
+    std::string commandKeyword = argv[1];
+    std::string directory = "./commands"; // Default directory to search
+
+    // Retrieve command from JSON
+    std::vector<CommandResponse> commandResponses = getCommandFromJSON(commandKeyword, directory);
+    if (!commandResponses.empty()) {
+        std::cout << "Terminal commands for " << commandKeyword << ":" << std::endl;
+        for (const auto& response : commandResponses) {
+            std::cout << "Command: " << response.response << std::endl;
+            std::cout << "Explanation: " << response.explanation << std::endl;
+            if (!response.example.empty()) {
+                std::cout << "Example: " << response.example << std::endl;
+            }
+            std::cout << std::endl;
         }
     } else {
-        std::cout << "Command not found" << std::endl;
+        std::cerr << "Command not found, If the command specified is a valid command you can contribute by adding command attribite to the codebase. Visit https://github.com/DevLouix/termaid.git" << std::endl;
     }
 
     return 0;

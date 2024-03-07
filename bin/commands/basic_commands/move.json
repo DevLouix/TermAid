@@ -1,0 +1,23 @@
+{
+  "move": [
+    {
+      "response": "mv",
+      "explanation": "For moving files or directories to a specified destination."
+    },
+    {
+      "response": "mv <source> <destination>",
+      "explanation": "Moves a file or directory from the specified source to the specified destination.",
+      "example": "mv file.txt /path/to/destination"
+    },
+    {
+      "response": "mv -i <source> <destination>",
+      "explanation": "Interactive mode. Prompts before overwriting existing destination files.",
+      "example": "mv -i file.txt /path/to/destination"
+    },
+    {
+      "response": "mv -u <source> <destination>",
+      "explanation": "Updates the destination file only if the source file is newer or the destination file does not exist.",
+      "example": "mv -u file.txt /path/to/destination"
+    }
+  ]
+}

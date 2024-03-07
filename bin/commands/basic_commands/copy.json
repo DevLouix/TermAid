@@ -1,0 +1,27 @@
+{
+    "copy": [
+        {
+            "response": "cp",
+            "explanation": "For copying files or directories to a specified destination."
+        },
+        {
+            "response": "cp <source> <destination>",
+            "explanation": "Copies a file or directory from the specified source to the specified destination.",
+            "example": "cp file.txt /path/to/destination"
+        },
+        {
+            "response": "cp -r <source> <destination>",
+            "explanation": "Copies a directory and its contents recursively from the specified source to the specified destination.",
+            "example": "cp -r folder /path/to/destination"
+        },
+        {
+            "response": "cp -u <source> <destination>",
+            "explanation": "Copies files only if the source file is newer than the destination file or if the destination file does not exist.",
+            "example": "cp -u file.txt /path/to/destination"
+        },
+        {
+            "response": "cp -v <source> <destination>",
+            "explanation": "Verbose mode. Prints a message for each file copied."
+        }
+    ]
+}

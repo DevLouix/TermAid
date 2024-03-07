@@ -1,0 +1,23 @@
+{
+    "delete": [
+        {
+            "response": "rm",
+            "explanation": "For deleting files or directories."
+        },
+        {
+            "response": "rm <file>",
+            "explanation": "Deletes the specified file.",
+            "example": "rm file.txt"
+        },
+        {
+            "response": "rm -r <directory>",
+            "explanation": "Deletes the specified directory and its contents recursively.",
+            "example": "rm -r directory"
+        },
+        {
+            "response": "rm -i <file>",
+            "explanation": "Interactive mode. Prompts before each removal.",
+            "example": "rm -i file.txt"
+        }
+    ]
+}
