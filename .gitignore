@@ -5,3 +5,5 @@ main.cpp
 /build
 
 /.vscode
+
+.gitignore
