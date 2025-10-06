@@ -1,0 +1,140 @@
+{
+  "tar": [
+    {
+      "response": "tar -czf <archive.tar.gz> <files>",
+      "explanation": "Create compressed tar.gz archive",
+      "example": "tar -czf backup.tar.gz /home/user"
+    },
+    {
+      "response": "tar -xzf <archive.tar.gz>",
+      "explanation": "Extract tar.gz archive",
+      "example": "tar -xzf backup.tar.gz"
+    },
+    {
+      "response": "tar -xzf <archive.tar.gz> -C <directory>",
+      "explanation": "Extract to specific directory",
+      "example": "tar -xzf backup.tar.gz -C /tmp"
+    },
+    {
+      "response": "tar -tzf <archive.tar.gz>",
+      "explanation": "List contents of tar.gz archive",
+      "example": "tar -tzf backup.tar.gz"
+    },
+    {
+      "response": "tar -cjf <archive.tar.bz2> <files>",
+      "explanation": "Create bzip2 compressed archive",
+      "example": "tar -cjf backup.tar.bz2 /home/user"
+    },
+    {
+      "response": "tar -xjf <archive.tar.bz2>",
+      "explanation": "Extract tar.bz2 archive",
+      "example": "tar -xjf backup.tar.bz2"
+    }
+  ],
+  "zip": [
+    {
+      "response": "zip <archive.zip> <files>",
+      "explanation": "Create zip archive",
+      "example": "zip backup.zip file1.txt file2.txt"
+    },
+    {
+      "response": "zip -r <archive.zip> <directory>",
+      "explanation": "Create zip archive recursively",
+      "example": "zip -r backup.zip /home/user"
+    },
+    {
+      "response": "zip -e <archive.zip> <files>",
+      "explanation": "Create encrypted zip archive",
+      "example": "zip -e secure.zip sensitive.txt"
+    }
+  ],
+  "unzip": [
+    {
+      "response": "unzip <archive.zip>",
+      "explanation": "Extract zip archive",
+      "example": "unzip backup.zip"
+    },
+    {
+      "response": "unzip <archive.zip> -d <directory>",
+      "explanation": "Extract to specific directory",
+      "example": "unzip backup.zip -d /tmp"
+    },
+    {
+      "response": "unzip -l <archive.zip>",
+      "explanation": "List contents of zip archive",
+      "example": "unzip -l backup.zip"
+    }
+  ],
+  "gzip": [
+    {
+      "response": "gzip <file>",
+      "explanation": "Compress file (creates .gz, removes original)",
+      "example": "gzip largefile.txt"
+    },
+    {
+      "response": "gzip -k <file>",
+      "explanation": "Compress file and keep original",
+      "example": "gzip -k largefile.txt"
+    },
+    {
+      "response": "gzip -d <file.gz>",
+      "explanation": "Decompress .gz file",
+      "example": "gzip -d largefile.txt.gz"
+    }
+  ],
+  "gunzip": [
+    {
+      "response": "gunzip <file.gz>",
+      "explanation": "Decompress .gz file",
+      "example": "gunzip largefile.txt.gz"
+    }
+  ],
+  "bzip2": [
+    {
+      "response": "bzip2 <file>",
+      "explanation": "Compress file with bzip2",
+      "example": "bzip2 largefile.txt"
+    },
+    {
+      "response": "bzip2 -d <file.bz2>",
+      "explanation": "Decompress .bz2 file",
+      "example": "bzip2 -d largefile.txt.bz2"
+    }
+  ],
+  "bunzip2": [
+    {
+      "response": "bunzip2 <file.bz2>",
+      "explanation": "Decompress .bz2 file",
+      "example": "bunzip2 largefile.txt.bz2"
+    }
+  ],
+  "xz": [
+    {
+      "response": "xz <file>",
+      "explanation": "Compress file with xz",
+      "example": "xz largefile.txt"
+    },
+    {
+      "response": "xz -d <file.xz>",
+      "explanation": "Decompress .xz file",
+      "example": "xz -d largefile.txt.xz"
+    }
+  ],
+  "7z": [
+    {
+      "response": "7z a <archive.7z> <files>",
+      "explanation": "Create 7z archive",
+      "example": "7z a backup.7z /home/user"
+    },
+    {
+      "response": "7z x <archive.7z>",
+      "explanation": "Extract 7z archive",
+      "example": "7z x backup.7z"
+    },
+    {
+      "response": "7z l <archive.7z>",
+      "explanation": "List contents of 7z archive",
+      "example": "7z l backup.7z"
+    }
+  ]
+}

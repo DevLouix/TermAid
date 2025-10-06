@@ -1,0 +1,129 @@
+{
+  "mount": [
+    {
+      "response": "mount",
+      "explanation": "Display all mounted filesystems"
+    },
+    {
+      "response": "mount <device> <mountpoint>",
+      "explanation": "Mount device to mountpoint",
+      "example": "sudo mount /dev/sdb1 /mnt/usb"
+    },
+    {
+      "response": "mount -t <type> <device> <mountpoint>",
+      "explanation": "Mount with specific filesystem type",
+      "example": "sudo mount -t ntfs /dev/sdb1 /mnt/usb"
+    }
+  ],
+  "umount": [
+    {
+      "response": "umount <mountpoint>",
+      "explanation": "Unmount filesystem",
+      "example": "sudo umount /mnt/usb"
+    },
+    {
+      "response": "umount -l <mountpoint>",
+      "explanation": "Lazy unmount (detach now, cleanup when not busy)",
+      "example": "sudo umount -l /mnt/usb"
+    }
+  ],
+  "fdisk": [
+    {
+      "response": "fdisk -l",
+      "explanation": "List all disk partitions",
+      "example": "sudo fdisk -l"
+    },
+    {
+      "response": "fdisk <device>",
+      "explanation": "Partition disk (interactive)",
+      "example": "sudo fdisk /dev/sdb"
+    }
+  ],
+  "parted": [
+    {
+      "response": "parted -l",
+      "explanation": "List partition layout on all block devices",
+      "example": "sudo parted -l"
+    },
+    {
+      "response": "parted <device>",
+      "explanation": "Partition disk (interactive)",
+      "example": "sudo parted /dev/sdb"
+    }
+  ],
+  "mkfs": [
+    {
+      "response": "mkfs.ext4 <device>",
+      "explanation": "Create ext4 filesystem",
+      "example": "sudo mkfs.ext4 /dev/sdb1"
+    },
+    {
+      "response": "mkfs.ntfs <device>",
+      "explanation": "Create NTFS filesystem",
+      "example": "sudo mkfs.ntfs /dev/sdb1"
+    },
+    {
+      "response": "mkfs.vfat <device>",
+      "explanation": "Create FAT32 filesystem",
+      "example": "sudo mkfs.vfat /dev/sdb1"
+    }
+  ],
+  "fsck": [
+    {
+      "response": "fsck <device>",
+      "explanation": "Check and repair filesystem",
+      "example": "sudo fsck /dev/sdb1"
+    },
+    {
+      "response": "fsck -y <device>",
+      "explanation": "Automatically repair filesystem",
+      "example": "sudo fsck -y /dev/sdb1"
+    }
+  ],
+  "dd": [
+    {
+      "response": "dd if=<input> of=<output>",
+      "explanation": "Copy and convert files (use with extreme caution!)",
+      "example": "sudo dd if=/dev/sda of=/dev/sdb bs=4M"
+    },
+    {
+      "response": "dd if=<iso> of=<device> bs=4M status=progress",
+      "explanation": "Create bootable USB from ISO",
+      "example": "sudo dd if=ubuntu.iso of=/dev/sdb bs=4M status=progress"
+    }
+  ],
+  "blkid": [
+    {
+      "response": "blkid",
+      "explanation": "Display block device attributes (UUID, filesystem type)",
+      "example": "sudo blkid"
+    }
+  ],
+  "lsof": [
+    {
+      "response": "lsof",
+      "explanation": "List open files and processes using them"
+    },
+    {
+      "response": "lsof <file>",
+      "explanation": "Show processes using specific file",
+      "example": "lsof /var/log/syslog"
+    },
+    {
+      "response": "lsof -i :<port>",
+      "explanation": "Show process using specific port",
+      "example": "lsof -i :80"
+    },
+    {
+      "response": "lsof -u <user>",
+      "explanation": "Show files opened by user",
+      "example": "lsof -u john"
+    }
+  ],
+  "sync": [
+    {
+      "response": "sync",
+      "explanation": "Flush filesystem buffers to disk"
+    }
+  ]
+}

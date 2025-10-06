@@ -1,0 +1,129 @@
+{
+  "kubectl": [
+    {
+      "response": "kubectl get pods",
+      "explanation": "List all pods in current namespace",
+      "example": "kubectl get pods"
+    },
+    {
+      "response": "kubectl get pods -A",
+      "explanation": "List all pods in all namespaces",
+      "example": "kubectl get pods -A"
+    },
+    {
+      "response": "kubectl get nodes",
+      "explanation": "List all nodes in cluster",
+      "example": "kubectl get nodes"
+    },
+    {
+      "response": "kubectl get services",
+      "explanation": "List all services",
+      "example": "kubectl get services"
+    },
+    {
+      "response": "kubectl get deployments",
+      "explanation": "List all deployments",
+      "example": "kubectl get deployments"
+    },
+    {
+      "response": "kubectl describe pod <name>",
+      "explanation": "Show detailed information about pod",
+      "example": "kubectl describe pod my-pod"
+    },
+    {
+      "response": "kubectl logs <pod>",
+      "explanation": "Print logs from pod",
+      "example": "kubectl logs my-pod"
+    },
+    {
+      "response": "kubectl logs -f <pod>",
+      "explanation": "Follow pod logs in real-time",
+      "example": "kubectl logs -f my-pod"
+    },
+    {
+      "response": "kubectl exec -it <pod> -- <command>",
+      "explanation": "Execute command in pod",
+      "example": "kubectl exec -it my-pod -- bash"
+    },
+    {
+      "response": "kubectl apply -f <file>",
+      "explanation": "Apply configuration from file",
+      "example": "kubectl apply -f deployment.yaml"
+    },
+    {
+      "response": "kubectl delete -f <file>",
+      "explanation": "Delete resources defined in file",
+      "example": "kubectl delete -f deployment.yaml"
+    },
+    {
+      "response": "kubectl delete pod <name>",
+      "explanation": "Delete specific pod",
+      "example": "kubectl delete pod my-pod"
+    },
+    {
+      "response": "kubectl create deployment <name> --image=<image>",
+      "explanation": "Create deployment with image",
+      "example": "kubectl create deployment nginx --image=nginx"
+    },
+    {
+      "response": "kubectl scale deployment <name> --replicas=<n>",
+      "explanation": "Scale deployment to N replicas",
+      "example": "kubectl scale deployment nginx --replicas=3"
+    },
+    {
+      "response": "kubectl expose deployment <name> --port=<port>",
+      "explanation": "Expose deployment as service",
+      "example": "kubectl expose deployment nginx --port=80"
+    },
+    {
+      "response": "kubectl port-forward <pod> <local_port>:<pod_port>",
+      "explanation": "Forward local port to pod port",
+      "example": "kubectl port-forward my-pod 8080:80"
+    },
+    {
+      "response": "kubectl get namespaces",
+      "explanation": "List all namespaces",
+      "example": "kubectl get namespaces"
+    },
+    {
+      "response": "kubectl create namespace <name>",
+      "explanation": "Create new namespace",
+      "example": "kubectl create namespace dev"
+    },
+    {
+      "response": "kubectl config get-contexts",
+      "explanation": "List all contexts",
+      "example": "kubectl config get-contexts"
+    },
+    {
+      "response": "kubectl config use-context <context>",
+      "explanation": "Switch to different context",
+      "example": "kubectl config use-context prod"
+    },
+    {
+      "response": "kubectl top nodes",
+      "explanation": "Show resource usage of nodes",
+      "example": "kubectl top nodes"
+    },
+    {
+      "response": "kubectl top pods",
+      "explanation": "Show resource usage of pods",
+      "example": "kubectl top pods"
+    },
+    {
+      "response": "kubectl rollout status deployment <name>",
+      "explanation": "Show rollout status",
+      "example": "kubectl rollout status deployment nginx"
+    },
+    {
+      "response": "kubectl rollout restart deployment <name>",
+      "explanation": "Restart deployment",
+      "example": "kubectl rollout restart deployment nginx"
+    },
+    {
+      "response": "kubectl rollout undo deployment <name>",
+      "explanation": "Rollback deployment to previous version",
+      "example": "kubectl rollout undo deployment nginx"
+    }
+  ]
+}

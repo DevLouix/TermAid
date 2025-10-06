@@ -1,0 +1,126 @@
+{
+  "env": [
+    {
+      "response": "env",
+      "explanation": "Display all environment variables"
+    }
+  ],
+  "export": [
+    {
+      "response": "export <VAR>=<value>",
+      "explanation": "Set environment variable",
+      "example": "export PATH=$PATH:/new/path"
+    }
+  ],
+  "echo": [
+    {
+      "response": "echo <text>",
+      "explanation": "Display text or variable value",
+      "example": "echo 'Hello World'"
+    },
+    {
+      "response": "echo $<variable>",
+      "explanation": "Display environment variable value",
+      "example": "echo $PATH"
+    }
+  ],
+  "printenv": [
+    {
+      "response": "printenv",
+      "explanation": "Print all environment variables"
+    },
+    {
+      "response": "printenv <variable>",
+      "explanation": "Print specific environment variable",
+      "example": "printenv PATH"
+    }
+  ],
+  "alias": [
+    {
+      "response": "alias",
+      "explanation": "List all aliases"
+    },
+    {
+      "response": "alias <name>='<command>'",
+      "explanation": "Create command alias",
+      "example": "alias ll='ls -la'"
+    }
+  ],
+  "unalias": [
+    {
+      "response": "unalias <name>",
+      "explanation": "Remove alias",
+      "example": "unalias ll"
+    }
+  ],
+  "history": [
+    {
+      "response": "history",
+      "explanation": "Display command history"
+    },
+    {
+      "response": "history <n>",
+      "explanation": "Display last N commands",
+      "example": "history 20"
+    },
+    {
+      "response": "history -c",
+      "explanation": "Clear command history",
+      "example": "history -c"
+    }
+  ],
+  "clear": [
+    {
+      "response": "clear",
+      "explanation": "Clear terminal screen"
+    }
+  ],
+  "reset": [
+    {
+      "response": "reset",
+      "explanation": "Reset terminal to default state"
+    }
+  ],
+  "exit": [
+    {
+      "response": "exit",
+      "explanation": "Exit current shell or terminal"
+    },
+    {
+      "response": "exit <code>",
+      "explanation": "Exit with specific exit code",
+      "example": "exit 1"
+    }
+  ],
+  "logout": [
+    {
+      "response": "logout",
+      "explanation": "Logout from current session"
+    }
+  ],
+  "source": [
+    {
+      "response": "source <file>",
+      "explanation": "Execute commands from file in current shell",
+      "example": "source ~/.bashrc"
+    }
+  ],
+  "bash": [
+    {
+      "response": "bash",
+      "explanation": "Start new bash shell"
+    },
+    {
+      "response": "bash <script>",
+      "explanation": "Execute bash script",
+      "example": "bash script.sh"
+    }
+  ],
+  "sh": [
+    {
+      "response": "sh <script>",
+      "explanation": "Execute shell script",
+      "example": "sh script.sh"
+    }
+  ]
+}

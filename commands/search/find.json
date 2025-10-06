@@ -1,0 +1,94 @@
+{
+  "find": [
+    {
+      "response": "find <directory> -name <pattern>",
+      "explanation": "Find files by name",
+      "example": "find /home -name '*.txt'"
+    },
+    {
+      "response": "find <directory> -iname <pattern>",
+      "explanation": "Find files by name (case-insensitive)",
+      "example": "find /home -iname '*.TXT'"
+    },
+    {
+      "response": "find <directory> -type f",
+      "explanation": "Find only files",
+      "example": "find /home -type f"
+    },
+    {
+      "response": "find <directory> -type d",
+      "explanation": "Find only directories",
+      "example": "find /home -type d"
+    },
+    {
+      "response": "find <directory> -size +<size>",
+      "explanation": "Find files larger than specified size",
+      "example": "find /home -size +100M"
+    },
+    {
+      "response": "find <directory> -mtime -<days>",
+      "explanation": "Find files modified in last N days",
+      "example": "find /home -mtime -7"
+    },
+    {
+      "response": "find <directory> -user <username>",
+      "explanation": "Find files owned by user",
+      "example": "find /home -user john"
+    },
+    {
+      "response": "find <directory> -perm <mode>",
+      "explanation": "Find files with specific permissions",
+      "example": "find /home -perm 777"
+    },
+    {
+      "response": "find <directory> -name <pattern> -delete",
+      "explanation": "Find and delete files",
+      "example": "find /tmp -name '*.tmp' -delete"
+    },
+    {
+      "response": "find <directory> -name <pattern> -exec <command> {} \\;",
+      "explanation": "Find files and execute command on each",
+      "example": "find /home -name '*.log' -exec rm {} \\;"
+    }
+  ],
+  "locate": [
+    {
+      "response": "locate <pattern>",
+      "explanation": "Find files by name using database (fast)",
+      "example": "locate nginx.conf"
+    },
+    {
+      "response": "locate -i <pattern>",
+      "explanation": "Case-insensitive search",
+      "example": "locate -i readme"
+    }
+  ],
+  "updatedb": [
+    {
+      "response": "updatedb",
+      "explanation": "Update locate database",
+      "example": "sudo updatedb"
+    }
+  ],
+  "which": [
+    {
+      "response": "which <command>",
+      "explanation": "Show full path of command",
+      "example": "which python"
+    }
+  ],
+  "whereis": [
+    {
+      "response": "whereis <command>",
+      "explanation": "Locate binary, source, and manual page files",
+      "example": "whereis python"
+    }
+  ],
+  "type": [
+    {
+      "response": "type <command>",
+      "explanation": "Display information about command type",
+      "example": "type ls"
+    }
+  ]
+}

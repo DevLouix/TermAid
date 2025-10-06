@@ -1,0 +1,47 @@
+{
+  "nano": [
+    {
+      "response": "nano <file>",
+      "explanation": "Edit file with nano text editor (beginner-friendly)",
+      "example": "nano file.txt"
+    },
+    {
+      "response": "nano +<line> <file>",
+      "explanation": "Open file at specific line number",
+      "example": "nano +10 file.txt"
+    }
+  ],
+  "vim": [
+    {
+      "response": "vim <file>",
+      "explanation": "Edit file with vim text editor",
+      "example": "vim file.txt"
+    },
+    {
+      "response": "vim +<line> <file>",
+      "explanation": "Open file at specific line number",
+      "example": "vim +10 file.txt"
+    }
+  ],
+  "vi": [
+    {
+      "response": "vi <file>",
+      "explanation": "Edit file with vi text editor",
+      "example": "vi file.txt"
+    }
+  ],
+  "emacs": [
+    {
+      "response": "emacs <file>",
+      "explanation": "Edit file with emacs text editor",
+      "example": "emacs file.txt"
+    }
+  ],
+  "gedit": [
+    {
+      "response": "gedit <file>",
+      "explanation": "Edit file with gedit GUI text editor",
+      "example": "gedit file.txt"
+    }
+  ]
+}

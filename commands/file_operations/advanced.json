@@ -1,0 +1,131 @@
+{
+  "file": [
+    {
+      "response": "file <file>",
+      "explanation": "Determine file type",
+      "example": "file document.pdf"
+    },
+    {
+      "response": "file *",
+      "explanation": "Show file types for all files in directory",
+      "example": "file *"
+    }
+  ],
+  "stat": [
+    {
+      "response": "stat <file>",
+      "explanation": "Display detailed file status and metadata",
+      "example": "stat file.txt"
+    }
+  ],
+  "basename": [
+    {
+      "response": "basename <path>",
+      "explanation": "Strip directory and suffix from filename",
+      "example": "basename /home/user/file.txt"
+    }
+  ],
+  "dirname": [
+    {
+      "response": "dirname <path>",
+      "explanation": "Strip last component from file path",
+      "example": "dirname /home/user/file.txt"
+    }
+  ],
+  "realpath": [
+    {
+      "response": "realpath <file>",
+      "explanation": "Print absolute path of file",
+      "example": "realpath ../file.txt"
+    }
+  ],
+  "readlink": [
+    {
+      "response": "readlink <link>",
+      "explanation": "Print value of symbolic link",
+      "example": "readlink /usr/bin/python"
+    },
+    {
+      "response": "readlink -f <link>",
+      "explanation": "Follow all symbolic links to get canonical path",
+      "example": "readlink -f /usr/bin/python"
+    }
+  ],
+  "tree": [
+    {
+      "response": "tree",
+      "explanation": "Display directory structure in tree format"
+    },
+    {
+      "response": "tree -L <depth>",
+      "explanation": "Limit tree depth to specified number of levels",
+      "example": "tree -L 2"
+    },
+    {
+      "response": "tree -a",
+      "explanation": "Show hidden files in tree",
+      "example": "tree -a"
+    },
+    {
+      "response": "tree -d",
+      "explanation": "Show directories only",
+      "example": "tree -d"
+    },
+    {
+      "response": "tree -h",
+      "explanation": "Print sizes in human-readable format",
+      "example": "tree -h"
+    }
+  ],
+  "xargs": [
+    {
+      "response": "command | xargs <command>",
+      "explanation": "Build and execute command from standard input",
+      "example": "find . -name '*.txt' | xargs rm"
+    },
+    {
+      "response": "command | xargs -I {} <command> {}",
+      "explanation": "Replace string with input",
+      "example": "ls *.txt | xargs -I {} cp {} backup/"
+    },
+    {
+      "response": "command | xargs -n <number>",
+      "explanation": "Use at most N arguments per command line",
+      "example": "echo 1 2 3 4 | xargs -n 2"
+    }
+  ],
+  "split": [
+    {
+      "response": "split <file>",
+      "explanation": "Split file into pieces (default 1000 lines each)",
+      "example": "split largefile.txt"
+    },
+    {
+      "response": "split -l <lines> <file>",
+      "explanation": "Split file into pieces of N lines",
+      "example": "split -l 100 largefile.txt part_"
+    },
+    {
+      "response": "split -b <size> <file>",
+      "explanation": "Split file into pieces of specified byte size",
+      "example": "split -b 10M largefile.iso part_"
+    }
+  ],
+  "shred": [
+    {
+      "response": "shred <file>",
+      "explanation": "Securely delete file by overwriting it multiple times",
+      "example": "shred sensitive.txt"
+    },
+    {
+      "response": "shred -u <file>",
+      "explanation": "Shred and remove file",
+      "example": "shred -u sensitive.txt"
+    },
+    {
+      "response": "shred -n <iterations> <file>",
+      "explanation": "Overwrite file N times",
+      "example": "shred -n 10 sensitive.txt"
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "uname": [
+    {
+      "response": "uname",
+      "explanation": "Print system information"
+    },
+    {
+      "response": "uname -a",
+      "explanation": "Print all system information",
+      "example": "uname -a"
+    },
+    {
+      "response": "uname -r",
+      "explanation": "Print kernel release",
+      "example": "uname -r"
+    },
+    {
+      "response": "uname -m",
+      "explanation": "Print machine hardware name",
+      "example": "uname -m"
+    }
+  ],
+  "hostname": [
+    {
+      "response": "hostname",
+      "explanation": "Show or set system hostname"
+    },
+    {
+      "response": "hostname -I",
+      "explanation": "Display all IP addresses of the host",
+      "example": "hostname -I"
+    }
+  ],
+  "uptime": [
+    {
+      "response": "uptime",
+      "explanation": "Show how long system has been running and load average"
+    }
+  ],
+  "whoami": [
+    {
+      "response": "whoami",
+      "explanation": "Display current username"
+    }
+  ],
+  "who": [
+    {
+      "response": "who",
+      "explanation": "Show who is logged in"
+    }
+  ],
+  "w": [
+    {
+      "response": "w",
+      "explanation": "Show who is logged in and what they are doing"
+    }
+  ],
+  "date": [
+    {
+      "response": "date",
+      "explanation": "Display or set system date and time"
+    },
+    {
+      "response": "date +%Y-%m-%d",
+      "explanation": "Display date in YYYY-MM-DD format",
+      "example": "date +%Y-%m-%d"
+    }
+  ],
+  "cal": [
+    {
+      "response": "cal",
+      "explanation": "Display calendar for current month"
+    },
+    {
+      "response": "cal <year>",
+      "explanation": "Display calendar for entire year",
+      "example": "cal 2024"
+    }
+  ],
+  "df": [
+    {
+      "response": "df",
+      "explanation": "Report file system disk space usage"
+    },
+    {
+      "response": "df -h",
+      "explanation": "Display disk usage in human-readable format",
+      "example": "df -h"
+    },
+    {
+      "response": "df -T",
+      "explanation": "Show file system type",
+      "example": "df -T"
+    }
+  ],
+  "du": [
+    {
+      "response": "du <directory>",
+      "explanation": "Estimate file and directory space usage",
+      "example": "du /home/user"
+    },
+    {
+      "response": "du -h <directory>",
+      "explanation": "Display sizes in human-readable format",
+      "example": "du -h /home/user"
+    },
+    {
+      "response": "du -sh <directory>",
+      "explanation": "Display total size of directory",
+      "example": "du -sh /home/user"
+    },
+    {
+      "response": "du -ah <directory>",
+      "explanation": "Display sizes of all files and directories",
+      "example": "du -ah /home/user"
+    }
+  ],
+  "free": [
+    {
+      "response": "free",
+      "explanation": "Display amount of free and used memory"
+    },
+    {
+      "response": "free -h",
+      "explanation": "Display memory in human-readable format",
+      "example": "free -h"
+    },
+    {
+      "response": "free -m",
+      "explanation": "Display memory in megabytes",
+      "example": "free -m"
+    }
+  ],
+  "lscpu": [
+    {
+      "response": "lscpu",
+      "explanation": "Display CPU architecture information"
+    }
+  ],
+  "lsblk": [
+    {
+      "response": "lsblk",
+      "explanation": "List information about block devices"
+    },
+    {
+      "response": "lsblk -f",
+      "explanation": "Display file system information",
+      "example": "lsblk -f"
+    }
+  ],
+  "lsusb": [
+    {
+      "response": "lsusb",
+      "explanation": "List USB devices"
+    }
+  ],
+  "lspci": [
+    {
+      "response": "lspci",
+      "explanation": "List PCI devices"
+    }
+  ],
+  "dmesg": [
+    {
+      "response": "dmesg",
+      "explanation": "Print kernel ring buffer messages"
+    },
+    {
+      "response": "dmesg | tail",
+      "explanation": "Show last kernel messages",
+      "example": "dmesg | tail"
+    }
+  ]
+}

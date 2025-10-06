@@ -1,0 +1,176 @@
+{
+  "apt": [
+    {
+      "response": "apt update",
+      "explanation": "Update package list from repositories",
+      "example": "sudo apt update"
+    },
+    {
+      "response": "apt upgrade",
+      "explanation": "Upgrade all installed packages",
+      "example": "sudo apt upgrade"
+    },
+    {
+      "response": "apt install <package>",
+      "explanation": "Install package",
+      "example": "sudo apt install nginx"
+    },
+    {
+      "response": "apt remove <package>",
+      "explanation": "Remove package (keep configuration files)",
+      "example": "sudo apt remove nginx"
+    },
+    {
+      "response": "apt purge <package>",
+      "explanation": "Remove package and configuration files",
+      "example": "sudo apt purge nginx"
+    },
+    {
+      "response": "apt search <keyword>",
+      "explanation": "Search for packages",
+      "example": "apt search python"
+    },
+    {
+      "response": "apt show <package>",
+      "explanation": "Show package details",
+      "example": "apt show nginx"
+    },
+    {
+      "response": "apt autoremove",
+      "explanation": "Remove unnecessary packages",
+      "example": "sudo apt autoremove"
+    },
+    {
+      "response": "apt list --installed",
+      "explanation": "List installed packages",
+      "example": "apt list --installed"
+    }
+  ],
+  "apt-get": [
+    {
+      "response": "apt-get update",
+      "explanation": "Update package list (older command)",
+      "example": "sudo apt-get update"
+    },
+    {
+      "response": "apt-get upgrade",
+      "explanation": "Upgrade packages",
+      "example": "sudo apt-get upgrade"
+    },
+    {
+      "response": "apt-get install <package>",
+      "explanation": "Install package",
+      "example": "sudo apt-get install nginx"
+    },
+    {
+      "response": "apt-get dist-upgrade",
+      "explanation": "Upgrade with intelligent dependency handling",
+      "example": "sudo apt-get dist-upgrade"
+    }
+  ],
+  "dpkg": [
+    {
+      "response": "dpkg -i <package.deb>",
+      "explanation": "Install .deb package",
+      "example": "sudo dpkg -i package.deb"
+    },
+    {
+      "response": "dpkg -r <package>",
+      "explanation": "Remove package",
+      "example": "sudo dpkg -r package"
+    },
+    {
+      "response": "dpkg -l",
+      "explanation": "List installed packages",
+      "example": "dpkg -l"
+    },
+    {
+      "response": "dpkg -L <package>",
+      "explanation": "List files installed by package",
+      "example": "dpkg -L nginx"
+    }
+  ],
+  "snap": [
+    {
+      "response": "snap install <package>",
+      "explanation": "Install snap package",
+      "example": "sudo snap install vlc"
+    },
+    {
+      "response": "snap remove <package>",
+      "explanation": "Remove snap package",
+      "example": "sudo snap remove vlc"
+    },
+    {
+      "response": "snap list",
+      "explanation": "List installed snaps",
+      "example": "snap list"
+    },
+    {
+      "response": "snap refresh",
+      "explanation": "Update all snaps",
+      "example": "sudo snap refresh"
+    }
+  ],
+  "yum": [
+    {
+      "response": "yum install <package>",
+      "explanation": "Install package (RHEL/CentOS)",
+      "example": "sudo yum install nginx"
+    },
+    {
+      "response": "yum update",
+      "explanation": "Update all packages",
+      "example": "sudo yum update"
+    },
+    {
+      "response": "yum remove <package>",
+      "explanation": "Remove package",
+      "example": "sudo yum remove nginx"
+    },
+    {
+      "response": "yum search <keyword>",
+      "explanation": "Search for packages",
+      "example": "yum search python"
+    }
+  ],
+  "dnf": [
+    {
+      "response": "dnf install <package>",
+      "explanation": "Install package (Fedora/RHEL 8+)",
+      "example": "sudo dnf install nginx"
+    },
+    {
+      "response": "dnf update",
+      "explanation": "Update all packages",
+      "example": "sudo dnf update"
+    },
+    {
+      "response": "dnf remove <package>",
+      "explanation": "Remove package",
+      "example": "sudo dnf remove nginx"
+    }
+  ],
+  "pacman": [
+    {
+      "response": "pacman -S <package>",
+      "explanation": "Install package (Arch Linux)",
+      "example": "sudo pacman -S nginx"
+    },
+    {
+      "response": "pacman -Syu",
+      "explanation": "Update system",
+      "example": "sudo pacman -Syu"
+    },
+    {
+      "response": "pacman -R <package>",
+      "explanation": "Remove package",
+      "example": "sudo pacman -R nginx"
+    },
+    {
+      "response": "pacman -Ss <keyword>",
+      "explanation": "Search for packages",
+      "example": "pacman -Ss python"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "docker": [
+    {
+      "response": "docker ps",
+      "explanation": "List running containers",
+      "example": "docker ps"
+    },
+    {
+      "response": "docker ps -a",
+      "explanation": "List all containers (including stopped)",
+      "example": "docker ps -a"
+    },
+    {
+      "response": "docker images",
+      "explanation": "List all Docker images",
+      "example": "docker images"
+    },
+    {
+      "response": "docker pull <image>",
+      "explanation": "Pull an image from Docker Hub",
+      "example": "docker pull ubuntu:latest"
+    },
+    {
+      "response": "docker run <image>",
+      "explanation": "Create and start a container from an image",
+      "example": "docker run ubuntu"
+    },
+    {
+      "response": "docker run -it <image>",
+      "explanation": "Run container in interactive mode with terminal",
+      "example": "docker run -it ubuntu bash"
+    },
+    {
+      "response": "docker run -d <image>",
+      "explanation": "Run container in detached mode (background)",
+      "example": "docker run -d nginx"
+    },
+    {
+      "response": "docker run -p <host_port>:<container_port> <image>",
+      "explanation": "Run container with port mapping",
+      "example": "docker run -p 8080:80 nginx"
+    },
+    {
+      "response": "docker run -v <host_path>:<container_path> <image>",
+      "explanation": "Run container with volume mount",
+      "example": "docker run -v /data:/app/data ubuntu"
+    },
+    {
+      "response": "docker start <container>",
+      "explanation": "Start a stopped container",
+      "example": "docker start my_container"
+    },
+    {
+      "response": "docker stop <container>",
+      "explanation": "Stop a running container",
+      "example": "docker stop my_container"
+    },
+    {
+      "response": "docker restart <container>",
+      "explanation": "Restart a container",
+      "example": "docker restart my_container"
+    },
+    {
+      "response": "docker rm <container>",
+      "explanation": "Remove a stopped container",
+      "example": "docker rm my_container"
+    },
+    {
+      "response": "docker rm -f <container>",
+      "explanation": "Force remove a running container",
+      "example": "docker rm -f my_container"
+    },
+    {
+      "response": "docker rmi <image>",
+      "explanation": "Remove an image",
+      "example": "docker rmi ubuntu:latest"
+    },
+    {
+      "response": "docker exec -it <container> <command>",
+      "explanation": "Execute command in running container",
+      "example": "docker exec -it my_container bash"
+    },
+    {
+      "response": "docker logs <container>",
+      "explanation": "View container logs",
+      "example": "docker logs my_container"
+    },
+    {
+      "response": "docker logs -f <container>",
+      "explanation": "Follow container logs in real-time",
+      "example": "docker logs -f my_container"
+    },
+    {
+      "response": "docker inspect <container>",
+      "explanation": "Display detailed container information",
+      "example": "docker inspect my_container"
+    },
+    {
+      "response": "docker build -t <tag> <path>",
+      "explanation": "Build image from Dockerfile",
+      "example": "docker build -t myapp:latest ."
+    },
+    {
+      "response": "docker-compose up",
+      "explanation": "Create and start containers defined in docker-compose.yml",
+      "example": "docker-compose up"
+    },
+    {
+      "response": "docker-compose up -d",
+      "explanation": "Start containers in detached mode",
+      "example": "docker-compose up -d"
+    },
+    {
+      "response": "docker-compose down",
+      "explanation": "Stop and remove containers, networks",
+      "example": "docker-compose down"
+    },
+    {
+      "response": "docker-compose ps",
+      "explanation": "List containers managed by docker-compose",
+      "example": "docker-compose ps"
+    },
+    {
+      "response": "docker network ls",
+      "explanation": "List Docker networks",
+      "example": "docker network ls"
+    },
+    {
+      "response": "docker volume ls",
+      "explanation": "List Docker volumes",
+      "example": "docker volume ls"
+    },
+    {
+      "response": "docker system prune",
+      "explanation": "Remove unused data (containers, networks, images)",
+      "example": "docker system prune"
+    },
+    {
+      "response": "docker stats",
+      "explanation": "Display live resource usage statistics",
+      "example": "docker stats"
+    }
+  ]
+}

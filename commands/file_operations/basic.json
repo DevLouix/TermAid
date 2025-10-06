@@ -1,0 +1,254 @@
+{
+  "ls": [
+    {
+      "response": "ls",
+      "explanation": "List directory contents"
+    },
+    {
+      "response": "ls -l",
+      "explanation": "List in long format with detailed information",
+      "example": "ls -l"
+    },
+    {
+      "response": "ls -a",
+      "explanation": "List all files including hidden files (starting with .)",
+      "example": "ls -a"
+    },
+    {
+      "response": "ls -lh",
+      "explanation": "List in long format with human-readable file sizes",
+      "example": "ls -lh"
+    },
+    {
+      "response": "ls -R",
+      "explanation": "List directories recursively",
+      "example": "ls -R"
+    },
+    {
+      "response": "ls -t",
+      "explanation": "Sort by modification time, newest first",
+      "example": "ls -t"
+    }
+  ],
+  "cd": [
+    {
+      "response": "cd",
+      "explanation": "Change directory to home directory"
+    },
+    {
+      "response": "cd <directory>",
+      "explanation": "Change to specified directory",
+      "example": "cd /home/user/documents"
+    },
+    {
+      "response": "cd ..",
+      "explanation": "Move up one directory level",
+      "example": "cd .."
+    },
+    {
+      "response": "cd -",
+      "explanation": "Change to previous directory",
+      "example": "cd -"
+    },
+    {
+      "response": "cd ~",
+      "explanation": "Change to home directory",
+      "example": "cd ~"
+    }
+  ],
+  "pwd": [
+    {
+      "response": "pwd",
+      "explanation": "Print working directory - shows current directory path"
+    }
+  ],
+  "mkdir": [
+    {
+      "response": "mkdir <directory>",
+      "explanation": "Create a new directory",
+      "example": "mkdir new_folder"
+    },
+    {
+      "response": "mkdir -p <path>",
+      "explanation": "Create parent directories as needed",
+      "example": "mkdir -p parent/child/grandchild"
+    },
+    {
+      "response": "mkdir -m <mode> <directory>",
+      "explanation": "Create directory with specific permissions",
+      "example": "mkdir -m 755 new_folder"
+    }
+  ],
+  "rmdir": [
+    {
+      "response": "rmdir <directory>",
+      "explanation": "Remove empty directory",
+      "example": "rmdir empty_folder"
+    }
+  ],
+  "touch": [
+    {
+      "response": "touch <file>",
+      "explanation": "Create empty file or update timestamp of existing file",
+      "example": "touch newfile.txt"
+    },
+    {
+      "response": "touch <file1> <file2>",
+      "explanation": "Create multiple files at once",
+      "example": "touch file1.txt file2.txt file3.txt"
+    }
+  ],
+  "cp": [
+    {
+      "response": "cp <source> <destination>",
+      "explanation": "Copy file or directory",
+      "example": "cp file.txt backup.txt"
+    },
+    {
+      "response": "cp -r <source> <destination>",
+      "explanation": "Copy directory recursively",
+      "example": "cp -r folder backup_folder"
+    },
+    {
+      "response": "cp -i <source> <destination>",
+      "explanation": "Interactive mode - prompt before overwrite",
+      "example": "cp -i file.txt existing.txt"
+    },
+    {
+      "response": "cp -u <source> <destination>",
+      "explanation": "Copy only when source is newer than destination",
+      "example": "cp -u file.txt backup.txt"
+    },
+    {
+      "response": "cp -v <source> <destination>",
+      "explanation": "Verbose mode - show files being copied",
+      "example": "cp -v file.txt backup.txt"
+    }
+  ],
+  "mv": [
+    {
+      "response": "mv <source> <destination>",
+      "explanation": "Move or rename file or directory",
+      "example": "mv oldname.txt newname.txt"
+    },
+    {
+      "response": "mv -i <source> <destination>",
+      "explanation": "Interactive mode - prompt before overwrite",
+      "example": "mv -i file.txt existing.txt"
+    },
+    {
+      "response": "mv -u <source> <destination>",
+      "explanation": "Move only when source is newer than destination",
+      "example": "mv -u file.txt backup.txt"
+    },
+    {
+      "response": "mv -v <source> <destination>",
+      "explanation": "Verbose mode - show files being moved",
+      "example": "mv -v file.txt newlocation/"
+    }
+  ],
+  "rm": [
+    {
+      "response": "rm <file>",
+      "explanation": "Remove file",
+      "example": "rm file.txt"
+    },
+    {
+      "response": "rm -r <directory>",
+      "explanation": "Remove directory and its contents recursively",
+      "example": "rm -r folder"
+    },
+    {
+      "response": "rm -f <file>",
+      "explanation": "Force removal without prompting",
+      "example": "rm -f file.txt"
+    },
+    {
+      "response": "rm -i <file>",
+      "explanation": "Interactive mode - prompt before each removal",
+      "example": "rm -i file.txt"
+    },
+    {
+      "response": "rm -rf <directory>",
+      "explanation": "Force remove directory recursively (use with caution!)",
+      "example": "rm -rf old_folder"
+    }
+  ],
+  "cat": [
+    {
+      "response": "cat <file>",
+      "explanation": "Display file contents",
+      "example": "cat file.txt"
+    },
+    {
+      "response": "cat <file1> <file2>",
+      "explanation": "Concatenate and display multiple files",
+      "example": "cat file1.txt file2.txt"
+    },
+    {
+      "response": "cat > <file>",
+      "explanation": "Create new file and write to it (Ctrl+D to save)",
+      "example": "cat > newfile.txt"
+    },
+    {
+      "response": "cat >> <file>",
+      "explanation": "Append to existing file",
+      "example": "cat >> existing.txt"
+    }
+  ],
+  "less": [
+    {
+      "response": "less <file>",
+      "explanation": "View file contents with pagination (space=next page, q=quit)",
+      "example": "less largefile.txt"
+    }
+  ],
+  "more": [
+    {
+      "response": "more <file>",
+      "explanation": "View file contents page by page",
+      "example": "more file.txt"
+    }
+  ],
+  "head": [
+    {
+      "response": "head <file>",
+      "explanation": "Display first 10 lines of file",
+      "example": "head file.txt"
+    },
+    {
+      "response": "head -n <number> <file>",
+      "explanation": "Display first N lines of file",
+      "example": "head -n 20 file.txt"
+    }
+  ],
+  "tail": [
+    {
+      "response": "tail <file>",
+      "explanation": "Display last 10 lines of file",
+      "example": "tail file.txt"
+    },
+    {
+      "response": "tail -n <number> <file>",
+      "explanation": "Display last N lines of file",
+      "example": "tail -n 20 file.txt"
+    },
+    {
+      "response": "tail -f <file>",
+      "explanation": "Follow file in real-time (useful for logs)",
+      "example": "tail -f /var/log/syslog"
+    }
+  ],
+  "ln": [
+    {
+      "response": "ln -s <target> <link>",
+      "explanation": "Create symbolic (soft) link",
+      "example": "ln -s /path/to/file linkname"
+    },
+    {
+      "response": "ln <target> <link>",
+      "explanation": "Create hard link",
+      "example": "ln file.txt hardlink.txt"
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "ping": [
+    {
+      "response": "ping <host>",
+      "explanation": "Send ICMP echo requests to network host",
+      "example": "ping google.com"
+    },
+    {
+      "response": "ping -c <count> <host>",
+      "explanation": "Send specified number of packets",
+      "example": "ping -c 4 google.com"
+    }
+  ],
+  "ifconfig": [
+    {
+      "response": "ifconfig",
+      "explanation": "Configure network interface (deprecated, use ip instead)"
+    },
+    {
+      "response": "ifconfig <interface>",
+      "explanation": "Display configuration of specific interface",
+      "example": "ifconfig eth0"
+    }
+  ],
+  "ip": [
+    {
+      "response": "ip addr",
+      "explanation": "Show IP addresses and network interfaces",
+      "example": "ip addr"
+    },
+    {
+      "response": "ip link",
+      "explanation": "Show network interfaces",
+      "example": "ip link"
+    },
+    {
+      "response": "ip route",
+      "explanation": "Show routing table",
+      "example": "ip route"
+    },
+    {
+      "response": "ip addr show <interface>",
+      "explanation": "Show IP address of specific interface",
+      "example": "ip addr show eth0"
+    }
+  ],
+  "netstat": [
+    {
+      "response": "netstat",
+      "explanation": "Print network connections, routing tables, interface statistics"
+    },
+    {
+      "response": "netstat -tuln",
+      "explanation": "Show listening TCP and UDP ports",
+      "example": "netstat -tuln"
+    },
+    {
+      "response": "netstat -r",
+      "explanation": "Display routing table",
+      "example": "netstat -r"
+    }
+  ],
+  "ss": [
+    {
+      "response": "ss",
+      "explanation": "Socket statistics - modern replacement for netstat"
+    },
+    {
+      "response": "ss -tuln",
+      "explanation": "Show listening TCP and UDP sockets",
+      "example": "ss -tuln"
+    },
+    {
+      "response": "ss -s",
+      "explanation": "Display socket statistics summary",
+      "example": "ss -s"
+    }
+  ],
+  "curl": [
+    {
+      "response": "curl <url>",
+      "explanation": "Transfer data from or to a server",
+      "example": "curl https://example.com"
+    },
+    {
+      "response": "curl -O <url>",
+      "explanation": "Download file and save with original name",
+      "example": "curl -O https://example.com/file.zip"
+    },
+    {
+      "response": "curl -o <filename> <url>",
+      "explanation": "Download file and save with specified name",
+      "example": "curl -o myfile.zip https://example.com/file.zip"
+    },
+    {
+      "response": "curl -I <url>",
+      "explanation": "Fetch headers only",
+      "example": "curl -I https://example.com"
+    }
+  ],
+  "wget": [
+    {
+      "response": "wget <url>",
+      "explanation": "Download files from the web",
+      "example": "wget https://example.com/file.zip"
+    },
+    {
+      "response": "wget -O <filename> <url>",
+      "explanation": "Download and save with specified name",
+      "example": "wget -O myfile.zip https://example.com/file.zip"
+    },
+    {
+      "response": "wget -c <url>",
+      "explanation": "Continue interrupted download",
+      "example": "wget -c https://example.com/largefile.iso"
+    }
+  ],
+  "ssh": [
+    {
+      "response": "ssh <user>@<host>",
+      "explanation": "Connect to remote host via SSH",
+      "example": "ssh user@192.168.1.100"
+    },
+    {
+      "response": "ssh -p <port> <user>@<host>",
+      "explanation": "Connect using specific port",
+      "example": "ssh -p 2222 user@example.com"
+    },
+    {
+      "response": "ssh -i <keyfile> <user>@<host>",
+      "explanation": "Connect using specific private key",
+      "example": "ssh -i ~/.ssh/mykey.pem user@example.com"
+    }
+  ],
+  "scp": [
+    {
+      "response": "scp <source> <user>@<host>:<destination>",
+      "explanation": "Securely copy files to remote host",
+      "example": "scp file.txt user@example.com:/home/user/"
+    },
+    {
+      "response": "scp <user>@<host>:<source> <destination>",
+      "explanation": "Securely copy files from remote host",
+      "example": "scp user@example.com:/home/user/file.txt ."
+    },
+    {
+      "response": "scp -r <directory> <user>@<host>:<destination>",
+      "explanation": "Recursively copy directory",
+      "example": "scp -r folder user@example.com:/home/user/"
+    }
+  ],
+  "rsync": [
+    {
+      "response": "rsync -av <source> <destination>",
+      "explanation": "Sync files and directories (archive mode, verbose)",
+      "example": "rsync -av /source/ /destination/"
+    },
+    {
+      "response": "rsync -avz <source> <user>@<host>:<destination>",
+      "explanation": "Sync to remote host with compression",
+      "example": "rsync -avz /local/ user@example.com:/remote/"
+    },
+    {
+      "response": "rsync -av --delete <source> <destination>",
+      "explanation": "Sync and delete files not in source",
+      "example": "rsync -av --delete /source/ /destination/"
+    }
+  ],
+  "nslookup": [
+    {
+      "response": "nslookup <domain>",
+      "explanation": "Query DNS to obtain domain name or IP address",
+      "example": "nslookup google.com"
+    }
+  ],
+  "dig": [
+    {
+      "response": "dig <domain>",
+      "explanation": "DNS lookup utility",
+      "example": "dig google.com"
+    },
+    {
+      "response": "dig +short <domain>",
+      "explanation": "Show only the IP address",
+      "example": "dig +short google.com"
+    }
+  ],
+  "traceroute": [
+    {
+      "response": "traceroute <host>",
+      "explanation": "Print route packets take to network host",
+      "example": "traceroute google.com"
+    }
+  ],
+  "nc": [
+    {
+      "response": "nc -l <port>",
+      "explanation": "Listen on specified port (netcat)",
+      "example": "nc -l 8080"
+    },
+    {
+      "response": "nc <host> <port>",
+      "explanation": "Connect to host on specified port",
+      "example": "nc example.com 80"
+    }
+  ]
+}

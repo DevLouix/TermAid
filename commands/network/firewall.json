@@ -1,0 +1,143 @@
+{
+  "iptables": [
+    {
+      "response": "iptables -L",
+      "explanation": "List all firewall rules",
+      "example": "sudo iptables -L"
+    },
+    {
+      "response": "iptables -L -v",
+      "explanation": "List rules with verbose output",
+      "example": "sudo iptables -L -v"
+    },
+    {
+      "response": "iptables -L -n",
+      "explanation": "List rules with numeric output (no DNS)",
+      "example": "sudo iptables -L -n"
+    },
+    {
+      "response": "iptables -A INPUT -p tcp --dport <port> -j ACCEPT",
+      "explanation": "Allow incoming TCP traffic on port",
+      "example": "sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT"
+    },
+    {
+      "response": "iptables -A INPUT -s <ip> -j DROP",
+      "explanation": "Block traffic from specific IP",
+      "example": "sudo iptables -A INPUT -s 192.168.1.100 -j DROP"
+    },
+    {
+      "response": "iptables -D INPUT <rule_number>",
+      "explanation": "Delete rule by number",
+      "example": "sudo iptables -D INPUT 3"
+    },
+    {
+      "response": "iptables -F",
+      "explanation": "Flush all rules (use with caution!)",
+      "example": "sudo iptables -F"
+    },
+    {
+      "response": "iptables -P INPUT DROP",
+      "explanation": "Set default policy for INPUT chain",
+      "example": "sudo iptables -P INPUT DROP"
+    },
+    {
+      "response": "iptables-save",
+      "explanation": "Save current iptables rules",
+      "example": "sudo iptables-save > /etc/iptables/rules.v4"
+    },
+    {
+      "response": "iptables-restore",
+      "explanation": "Restore iptables rules from file",
+      "example": "sudo iptables-restore < /etc/iptables/rules.v4"
+    }
+  ],
+  "ufw": [
+    {
+      "response": "ufw status",
+      "explanation": "Show firewall status",
+      "example": "sudo ufw status"
+    },
+    {
+      "response": "ufw enable",
+      "explanation": "Enable firewall",
+      "example": "sudo ufw enable"
+    },
+    {
+      "response": "ufw disable",
+      "explanation": "Disable firewall",
+      "example": "sudo ufw disable"
+    },
+    {
+      "response": "ufw allow <port>",
+      "explanation": "Allow traffic on port",
+      "example": "sudo ufw allow 22"
+    },
+    {
+      "response": "ufw allow <service>",
+      "explanation": "Allow traffic for service",
+      "example": "sudo ufw allow ssh"
+    },
+    {
+      "response": "ufw deny <port>",
+      "explanation": "Deny traffic on port",
+      "example": "sudo ufw deny 23"
+    },
+    {
+      "response": "ufw delete allow <port>",
+      "explanation": "Remove allow rule",
+      "example": "sudo ufw delete allow 80"
+    },
+    {
+      "response": "ufw reset",
+      "explanation": "Reset firewall to default",
+      "example": "sudo ufw reset"
+    },
+    {
+      "response": "ufw status numbered",
+      "explanation": "Show numbered list of rules",
+      "example": "sudo ufw status numbered"
+    },
+    {
+      "response": "ufw delete <number>",
+      "explanation": "Delete rule by number",
+      "example": "sudo ufw delete 3"
+    }
+  ],
+  "firewalld": [
+    {
+      "response": "firewall-cmd --state",
+      "explanation": "Check firewalld state",
+      "example": "firewall-cmd --state"
+    },
+    {
+      "response": "firewall-cmd --list-all",
+      "explanation": "List all firewall settings",
+      "example": "sudo firewall-cmd --list-all"
+    },
+    {
+      "response": "firewall-cmd --add-port=<port>/tcp",
+      "explanation": "Open TCP port",
+      "example": "sudo firewall-cmd --add-port=80/tcp"
+    },
+    {
+      "response": "firewall-cmd --add-service=<service>",
+      "explanation": "Allow service",
+      "example": "sudo firewall-cmd --add-service=http"
+    },
+    {
+      "response": "firewall-cmd --remove-port=<port>/tcp",
+      "explanation": "Close TCP port",
+      "example": "sudo firewall-cmd --remove-port=80/tcp"
+    },
+    {
+      "response": "firewall-cmd --reload",
+      "explanation": "Reload firewall rules",
+      "example": "sudo firewall-cmd --reload"
+    },
+    {
+      "response": "firewall-cmd --permanent --add-port=<port>/tcp",
+      "explanation": "Permanently open TCP port",
+      "example": "sudo firewall-cmd --permanent --add-port=80/tcp"
+    }
+  ]
+}

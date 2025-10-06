@@ -1,0 +1,201 @@
+{
+  "ps": [
+    {
+      "response": "ps",
+      "explanation": "Report snapshot of current processes"
+    },
+    {
+      "response": "ps aux",
+      "explanation": "Show all processes with detailed information",
+      "example": "ps aux"
+    },
+    {
+      "response": "ps -ef",
+      "explanation": "Display all processes in full format",
+      "example": "ps -ef"
+    },
+    {
+      "response": "ps -u <user>",
+      "explanation": "Show processes for specific user",
+      "example": "ps -u john"
+    }
+  ],
+  "top": [
+    {
+      "response": "top",
+      "explanation": "Display dynamic real-time view of running processes"
+    },
+    {
+      "response": "top -u <user>",
+      "explanation": "Show processes for specific user",
+      "example": "top -u john"
+    }
+  ],
+  "htop": [
+    {
+      "response": "htop",
+      "explanation": "Interactive process viewer (enhanced version of top)"
+    }
+  ],
+  "kill": [
+    {
+      "response": "kill <pid>",
+      "explanation": "Send TERM signal to process (graceful termination)",
+      "example": "kill 1234"
+    },
+    {
+      "response": "kill -9 <pid>",
+      "explanation": "Force kill process (SIGKILL)",
+      "example": "kill -9 1234"
+    },
+    {
+      "response": "kill -l",
+      "explanation": "List all available signals",
+      "example": "kill -l"
+    }
+  ],
+  "killall": [
+    {
+      "response": "killall <process_name>",
+      "explanation": "Kill all processes with specified name",
+      "example": "killall firefox"
+    },
+    {
+      "response": "killall -9 <process_name>",
+      "explanation": "Force kill all processes with specified name",
+      "example": "killall -9 firefox"
+    }
+  ],
+  "pkill": [
+    {
+      "response": "pkill <pattern>",
+      "explanation": "Kill processes based on name pattern",
+      "example": "pkill chrome"
+    },
+    {
+      "response": "pkill -u <user>",
+      "explanation": "Kill all processes owned by user",
+      "example": "pkill -u john"
+    }
+  ],
+  "pgrep": [
+    {
+      "response": "pgrep <pattern>",
+      "explanation": "Find process IDs by name pattern",
+      "example": "pgrep firefox"
+    },
+    {
+      "response": "pgrep -u <user>",
+      "explanation": "Find processes owned by user",
+      "example": "pgrep -u john"
+    }
+  ],
+  "bg": [
+    {
+      "response": "bg",
+      "explanation": "Resume suspended job in background"
+    },
+    {
+      "response": "bg %<job_number>",
+      "explanation": "Resume specific job in background",
+      "example": "bg %1"
+    }
+  ],
+  "fg": [
+    {
+      "response": "fg",
+      "explanation": "Bring background job to foreground"
+    },
+    {
+      "response": "fg %<job_number>",
+      "explanation": "Bring specific job to foreground",
+      "example": "fg %1"
+    }
+  ],
+  "jobs": [
+    {
+      "response": "jobs",
+      "explanation": "List active jobs in current shell"
+    },
+    {
+      "response": "jobs -l",
+      "explanation": "List jobs with process IDs",
+      "example": "jobs -l"
+    }
+  ],
+  "nohup": [
+    {
+      "response": "nohup <command> &",
+      "explanation": "Run command immune to hangups, with output to nohup.out",
+      "example": "nohup python script.py &"
+    }
+  ],
+  "nice": [
+    {
+      "response": "nice -n <priority> <command>",
+      "explanation": "Run command with modified scheduling priority (-20 to 19)",
+      "example": "nice -n 10 ./script.sh"
+    }
+  ],
+  "renice": [
+    {
+      "response": "renice <priority> -p <pid>",
+      "explanation": "Change priority of running process",
+      "example": "renice 5 -p 1234"
+    }
+  ],
+  "systemctl": [
+    {
+      "response": "systemctl status <service>",
+      "explanation": "Show status of systemd service",
+      "example": "systemctl status nginx"
+    },
+    {
+      "response": "systemctl start <service>",
+      "explanation": "Start systemd service",
+      "example": "systemctl start nginx"
+    },
+    {
+      "response": "systemctl stop <service>",
+      "explanation": "Stop systemd service",
+      "example": "systemctl stop nginx"
+    },
+    {
+      "response": "systemctl restart <service>",
+      "explanation": "Restart systemd service",
+      "example": "systemctl restart nginx"
+    },
+    {
+      "response": "systemctl enable <service>",
+      "explanation": "Enable service to start at boot",
+      "example": "systemctl enable nginx"
+    },
+    {
+      "response": "systemctl disable <service>",
+      "explanation": "Disable service from starting at boot",
+      "example": "systemctl disable nginx"
+    }
+  ],
+  "service": [
+    {
+      "response": "service <service> status",
+      "explanation": "Check service status (older init systems)",
+      "example": "service apache2 status"
+    },
+    {
+      "response": "service <service> start",
+      "explanation": "Start service",
+      "example": "service apache2 start"
+    },
+    {
+      "response": "service <service> stop",
+      "explanation": "Stop service",
+      "example": "service apache2 stop"
+    },
+    {
+      "response": "service <service> restart",
+      "explanation": "Restart service",
+      "example": "service apache2 restart"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "grep": [
+    {
+      "response": "grep <pattern> <file>",
+      "explanation": "Search for pattern in file",
+      "example": "grep 'error' logfile.txt"
+    },
+    {
+      "response": "grep -r <pattern> <directory>",
+      "explanation": "Recursively search for pattern in directory",
+      "example": "grep -r 'TODO' /project"
+    },
+    {
+      "response": "grep -i <pattern> <file>",
+      "explanation": "Case-insensitive search",
+      "example": "grep -i 'error' logfile.txt"
+    },
+    {
+      "response": "grep -v <pattern> <file>",
+      "explanation": "Invert match - show lines NOT matching pattern",
+      "example": "grep -v 'debug' logfile.txt"
+    },
+    {
+      "response": "grep -n <pattern> <file>",
+      "explanation": "Show line numbers with matches",
+      "example": "grep -n 'error' logfile.txt"
+    },
+    {
+      "response": "grep -c <pattern> <file>",
+      "explanation": "Count matching lines",
+      "example": "grep -c 'error' logfile.txt"
+    }
+  ],
+  "sed": [
+    {
+      "response": "sed 's/<old>/<new>/' <file>",
+      "explanation": "Replace first occurrence of pattern in each line",
+      "example": "sed 's/old/new/' file.txt"
+    },
+    {
+      "response": "sed 's/<old>/<new>/g' <file>",
+      "explanation": "Replace all occurrences of pattern",
+      "example": "sed 's/old/new/g' file.txt"
+    },
+    {
+      "response": "sed -i 's/<old>/<new>/g' <file>",
+      "explanation": "Replace in file (in-place editing)",
+      "example": "sed -i 's/old/new/g' file.txt"
+    },
+    {
+      "response": "sed -n '<line>p' <file>",
+      "explanation": "Print specific line number",
+      "example": "sed -n '5p' file.txt"
+    }
+  ],
+  "awk": [
+    {
+      "response": "awk '{print $1}' <file>",
+      "explanation": "Print first column of each line",
+      "example": "awk '{print $1}' data.txt"
+    },
+    {
+      "response": "awk -F: '{print $1}' <file>",
+      "explanation": "Use custom field separator (colon in this case)",
+      "example": "awk -F: '{print $1}' /etc/passwd"
+    },
+    {
+      "response": "awk '/pattern/ {print}' <file>",
+      "explanation": "Print lines matching pattern",
+      "example": "awk '/error/ {print}' logfile.txt"
+    }
+  ],
+  "cut": [
+    {
+      "response": "cut -d '<delimiter>' -f <field> <file>",
+      "explanation": "Cut out sections from each line using delimiter",
+      "example": "cut -d ',' -f 1,3 data.csv"
+    },
+    {
+      "response": "cut -c <range> <file>",
+      "explanation": "Cut by character position",
+      "example": "cut -c 1-10 file.txt"
+    }
+  ],
+  "sort": [
+    {
+      "response": "sort <file>",
+      "explanation": "Sort lines of text file",
+      "example": "sort names.txt"
+    },
+    {
+      "response": "sort -r <file>",
+      "explanation": "Sort in reverse order",
+      "example": "sort -r names.txt"
+    },
+    {
+      "response": "sort -n <file>",
+      "explanation": "Sort numerically",
+      "example": "sort -n numbers.txt"
+    },
+    {
+      "response": "sort -u <file>",
+      "explanation": "Sort and remove duplicates",
+      "example": "sort -u names.txt"
+    }
+  ],
+  "uniq": [
+    {
+      "response": "uniq <file>",
+      "explanation": "Remove duplicate adjacent lines (use with sort)",
+      "example": "sort file.txt | uniq"
+    },
+    {
+      "response": "uniq -c <file>",
+      "explanation": "Count occurrences of each line",
+      "example": "sort file.txt | uniq -c"
+    },
+    {
+      "response": "uniq -d <file>",
+      "explanation": "Show only duplicate lines",
+      "example": "sort file.txt | uniq -d"
+    }
+  ],
+  "wc": [
+    {
+      "response": "wc <file>",
+      "explanation": "Count lines, words, and bytes in file",
+      "example": "wc file.txt"
+    },
+    {
+      "response": "wc -l <file>",
+      "explanation": "Count lines only",
+      "example": "wc -l file.txt"
+    },
+    {
+      "response": "wc -w <file>",
+      "explanation": "Count words only",
+      "example": "wc -w file.txt"
+    },
+    {
+      "response": "wc -c <file>",
+      "explanation": "Count bytes only",
+      "example": "wc -c file.txt"
+    }
+  ],
+  "tr": [
+    {
+      "response": "tr '<set1>' '<set2>'",
+      "explanation": "Translate or delete characters",
+      "example": "echo 'hello' | tr 'a-z' 'A-Z'"
+    },
+    {
+      "response": "tr -d '<set>'",
+      "explanation": "Delete specified characters",
+      "example": "echo 'hello123' | tr -d '0-9'"
+    }
+  ],
+  "diff": [
+    {
+      "response": "diff <file1> <file2>",
+      "explanation": "Compare files line by line",
+      "example": "diff file1.txt file2.txt"
+    },
+    {
+      "response": "diff -u <file1> <file2>",
+      "explanation": "Unified diff format (more readable)",
+      "example": "diff -u file1.txt file2.txt"
+    },
+    {
+      "response": "diff -r <dir1> <dir2>",
+      "explanation": "Recursively compare directories",
+      "example": "diff -r folder1 folder2"
+    }
+  ],
+  "comm": [
+    {
+      "response": "comm <file1> <file2>",
+      "explanation": "Compare two sorted files line by line",
+      "example": "comm file1.txt file2.txt"
+    }
+  ],
+  "tee": [
+    {
+      "response": "command | tee <file>",
+      "explanation": "Read from stdin and write to stdout and file",
+      "example": "ls -la | tee output.txt"
+    },
+    {
+      "response": "command | tee -a <file>",
+      "explanation": "Append to file instead of overwriting",
+      "example": "ls -la | tee -a output.txt"
+    }
+  ]
+}

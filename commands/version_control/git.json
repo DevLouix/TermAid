@@ -1,0 +1,229 @@
+{
+  "git": [
+    {
+      "response": "git init",
+      "explanation": "Initialize a new Git repository",
+      "example": "git init"
+    },
+    {
+      "response": "git clone <url>",
+      "explanation": "Clone a repository from URL",
+      "example": "git clone https://github.com/user/repo.git"
+    },
+    {
+      "response": "git status",
+      "explanation": "Show working tree status",
+      "example": "git status"
+    },
+    {
+      "response": "git add <file>",
+      "explanation": "Add file to staging area",
+      "example": "git add file.txt"
+    },
+    {
+      "response": "git add .",
+      "explanation": "Add all changes to staging area",
+      "example": "git add ."
+    },
+    {
+      "response": "git add -A",
+      "explanation": "Add all changes including deletions",
+      "example": "git add -A"
+    },
+    {
+      "response": "git commit -m <message>",
+      "explanation": "Commit staged changes with message",
+      "example": "git commit -m 'Add new feature'"
+    },
+    {
+      "response": "git commit -am <message>",
+      "explanation": "Add and commit tracked files in one step",
+      "example": "git commit -am 'Update files'"
+    },
+    {
+      "response": "git push",
+      "explanation": "Push commits to remote repository",
+      "example": "git push"
+    },
+    {
+      "response": "git push origin <branch>",
+      "explanation": "Push branch to remote origin",
+      "example": "git push origin main"
+    },
+    {
+      "response": "git push -u origin <branch>",
+      "explanation": "Push and set upstream branch",
+      "example": "git push -u origin main"
+    },
+    {
+      "response": "git pull",
+      "explanation": "Fetch and merge changes from remote",
+      "example": "git pull"
+    },
+    {
+      "response": "git pull origin <branch>",
+      "explanation": "Pull specific branch from remote",
+      "example": "git pull origin main"
+    },
+    {
+      "response": "git fetch",
+      "explanation": "Download objects and refs from remote",
+      "example": "git fetch"
+    },
+    {
+      "response": "git branch",
+      "explanation": "List all local branches",
+      "example": "git branch"
+    },
+    {
+      "response": "git branch <name>",
+      "explanation": "Create new branch",
+      "example": "git branch feature-x"
+    },
+    {
+      "response": "git branch -d <name>",
+      "explanation": "Delete branch (safe)",
+      "example": "git branch -d feature-x"
+    },
+    {
+      "response": "git branch -D <name>",
+      "explanation": "Force delete branch",
+      "example": "git branch -D feature-x"
+    },
+    {
+      "response": "git checkout <branch>",
+      "explanation": "Switch to branch",
+      "example": "git checkout main"
+    },
+    {
+      "response": "git checkout -b <branch>",
+      "explanation": "Create and switch to new branch",
+      "example": "git checkout -b feature-x"
+    },
+    {
+      "response": "git switch <branch>",
+      "explanation": "Switch to branch (modern alternative)",
+      "example": "git switch main"
+    },
+    {
+      "response": "git switch -c <branch>",
+      "explanation": "Create and switch to new branch",
+      "example": "git switch -c feature-x"
+    },
+    {
+      "response": "git merge <branch>",
+      "explanation": "Merge branch into current branch",
+      "example": "git merge feature-x"
+    },
+    {
+      "response": "git rebase <branch>",
+      "explanation": "Reapply commits on top of another branch",
+      "example": "git rebase main"
+    },
+    {
+      "response": "git log",
+      "explanation": "Show commit history",
+      "example": "git log"
+    },
+    {
+      "response": "git log --oneline",
+      "explanation": "Show compact commit history",
+      "example": "git log --oneline"
+    },
+    {
+      "response": "git log --graph",
+      "explanation": "Show commit history with graph",
+      "example": "git log --graph --oneline"
+    },
+    {
+      "response": "git diff",
+      "explanation": "Show changes between commits, working tree, etc",
+      "example": "git diff"
+    },
+    {
+      "response": "git diff --staged",
+      "explanation": "Show changes in staging area",
+      "example": "git diff --staged"
+    },
+    {
+      "response": "git stash",
+      "explanation": "Stash changes in working directory",
+      "example": "git stash"
+    },
+    {
+      "response": "git stash pop",
+      "explanation": "Apply and remove most recent stash",
+      "example": "git stash pop"
+    },
+    {
+      "response": "git stash list",
+      "explanation": "List all stashes",
+      "example": "git stash list"
+    },
+    {
+      "response": "git reset <file>",
+      "explanation": "Unstage file",
+      "example": "git reset file.txt"
+    },
+    {
+      "response": "git reset --hard",
+      "explanation": "Reset working directory to last commit (destructive!)",
+      "example": "git reset --hard"
+    },
+    {
+      "response": "git reset --hard <commit>",
+      "explanation": "Reset to specific commit (destructive!)",
+      "example": "git reset --hard HEAD~1"
+    },
+    {
+      "response": "git revert <commit>",
+      "explanation": "Create new commit that undoes changes",
+      "example": "git revert abc123"
+    },
+    {
+      "response": "git remote -v",
+      "explanation": "List remote repositories",
+      "example": "git remote -v"
+    },
+    {
+      "response": "git remote add <name> <url>",
+      "explanation": "Add remote repository",
+      "example": "git remote add origin https://github.com/user/repo.git"
+    },
+    {
+      "response": "git tag",
+      "explanation": "List all tags",
+      "example": "git tag"
+    },
+    {
+      "response": "git tag <name>",
+      "explanation": "Create lightweight tag",
+      "example": "git tag v1.0.0"
+    },
+    {
+      "response": "git tag -a <name> -m <message>",
+      "explanation": "Create annotated tag",
+      "example": "git tag -a v1.0.0 -m 'Release version 1.0.0'"
+    },
+    {
+      "response": "git show <commit>",
+      "explanation": "Show commit details",
+      "example": "git show abc123"
+    },
+    {
+      "response": "git blame <file>",
+      "explanation": "Show who changed each line of file",
+      "example": "git blame file.txt"
+    },
+    {
+      "response": "git clean -fd",
+      "explanation": "Remove untracked files and directories",
+      "example": "git clean -fd"
+    },
+    {
+      "response": "git cherry-pick <commit>",
+      "explanation": "Apply changes from specific commit",
+      "example": "git cherry-pick abc123"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "watch": [
+    {
+      "response": "watch <command>",
+      "explanation": "Execute command repeatedly and display results",
+      "example": "watch df -h"
+    },
+    {
+      "response": "watch -n <seconds> <command>",
+      "explanation": "Execute command every N seconds",
+      "example": "watch -n 5 'ps aux | grep python'"
+    },
+    {
+      "response": "watch -d <command>",
+      "explanation": "Highlight differences between updates",
+      "example": "watch -d free -h"
+    }
+  ],
+  "vmstat": [
+    {
+      "response": "vmstat",
+      "explanation": "Report virtual memory statistics"
+    },
+    {
+      "response": "vmstat <interval> <count>",
+      "explanation": "Display stats every N seconds for count times",
+      "example": "vmstat 2 5"
+    }
+  ],
+  "iostat": [
+    {
+      "response": "iostat",
+      "explanation": "Report CPU and I/O statistics"
+    },
+    {
+      "response": "iostat -x",
+      "explanation": "Display extended statistics",
+      "example": "iostat -x 2"
+    }
+  ],
+  "sar": [
+    {
+      "response": "sar",
+      "explanation": "Collect and report system activity information"
+    },
+    {
+      "response": "sar -u",
+      "explanation": "Display CPU utilization",
+      "example": "sar -u 1 5"
+    },
+    {
+      "response": "sar -r",
+      "explanation": "Display memory utilization",
+      "example": "sar -r"
+    }
+  ],
+  "mpstat": [
+    {
+      "response": "mpstat",
+      "explanation": "Report processor statistics"
+    },
+    {
+      "response": "mpstat -P ALL",
+      "explanation": "Display statistics for all CPUs",
+      "example": "mpstat -P ALL 1"
+    }
+  ]
+}

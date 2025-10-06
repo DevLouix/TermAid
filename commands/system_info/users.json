@@ -1,0 +1,112 @@
+{
+  "useradd": [
+    {
+      "response": "useradd <username>",
+      "explanation": "Create new user account",
+      "example": "sudo useradd john"
+    },
+    {
+      "response": "useradd -m <username>",
+      "explanation": "Create user with home directory",
+      "example": "sudo useradd -m john"
+    },
+    {
+      "response": "useradd -m -s <shell> <username>",
+      "explanation": "Create user with specific shell",
+      "example": "sudo useradd -m -s /bin/bash john"
+    }
+  ],
+  "userdel": [
+    {
+      "response": "userdel <username>",
+      "explanation": "Delete user account",
+      "example": "sudo userdel john"
+    },
+    {
+      "response": "userdel -r <username>",
+      "explanation": "Delete user and home directory",
+      "example": "sudo userdel -r john"
+    }
+  ],
+  "usermod": [
+    {
+      "response": "usermod -aG <group> <username>",
+      "explanation": "Add user to group",
+      "example": "sudo usermod -aG sudo john"
+    },
+    {
+      "response": "usermod -s <shell> <username>",
+      "explanation": "Change user's shell",
+      "example": "sudo usermod -s /bin/zsh john"
+    },
+    {
+      "response": "usermod -l <newname> <oldname>",
+      "explanation": "Rename user",
+      "example": "sudo usermod -l johnny john"
+    }
+  ],
+  "passwd": [
+    {
+      "response": "passwd",
+      "explanation": "Change current user's password"
+    },
+    {
+      "response": "passwd <username>",
+      "explanation": "Change password for specified user",
+      "example": "sudo passwd john"
+    }
+  ],
+  "groupadd": [
+    {
+      "response": "groupadd <groupname>",
+      "explanation": "Create new group",
+      "example": "sudo groupadd developers"
+    }
+  ],
+  "groupdel": [
+    {
+      "response": "groupdel <groupname>",
+      "explanation": "Delete group",
+      "example": "sudo groupdel developers"
+    }
+  ],
+  "groups": [
+    {
+      "response": "groups",
+      "explanation": "Display groups current user belongs to"
+    },
+    {
+      "response": "groups <username>",
+      "explanation": "Display groups for specified user",
+      "example": "groups john"
+    }
+  ],
+  "id": [
+    {
+      "response": "id",
+      "explanation": "Display user and group IDs for current user"
+    },
+    {
+      "response": "id <username>",
+      "explanation": "Display user and group IDs for specified user",
+      "example": "id john"
+    }
+  ],
+  "last": [
+    {
+      "response": "last",
+      "explanation": "Show listing of last logged in users"
+    },
+    {
+      "response": "last <username>",
+      "explanation": "Show login history for specific user",
+      "example": "last john"
+    }
+  ],
+  "lastlog": [
+    {
+      "response": "lastlog",
+      "explanation": "Display last login information for all users"
+    }
+  ]
+}

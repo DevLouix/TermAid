@@ -1,0 +1,88 @@
+{
+  "crontab": [
+    {
+      "response": "crontab -e",
+      "explanation": "Edit crontab file for current user",
+      "example": "crontab -e"
+    },
+    {
+      "response": "crontab -l",
+      "explanation": "List crontab entries for current user",
+      "example": "crontab -l"
+    },
+    {
+      "response": "crontab -r",
+      "explanation": "Remove crontab for current user",
+      "example": "crontab -r"
+    },
+    {
+      "response": "crontab -u <user> -e",
+      "explanation": "Edit crontab for specific user",
+      "example": "sudo crontab -u john -e"
+    },
+    {
+      "response": "crontab -u <user> -l",
+      "explanation": "List crontab for specific user",
+      "example": "sudo crontab -u john -l"
+    }
+  ],
+  "at": [
+    {
+      "response": "at <time>",
+      "explanation": "Schedule one-time job at specific time",
+      "example": "at 10:00 PM"
+    },
+    {
+      "response": "at now + <n> minutes",
+      "explanation": "Schedule job N minutes from now",
+      "example": "at now + 30 minutes"
+    },
+    {
+      "response": "at now + <n> hours",
+      "explanation": "Schedule job N hours from now",
+      "example": "at now + 2 hours"
+    },
+    {
+      "response": "atq",
+      "explanation": "List pending at jobs",
+      "example": "atq"
+    },
+    {
+      "response": "atrm <job_id>",
+      "explanation": "Remove scheduled at job",
+      "example": "atrm 5"
+    },
+    {
+      "response": "batch",
+      "explanation": "Schedule job when system load is low",
+      "example": "batch"
+    }
+  ],
+  "systemd-timer": [
+    {
+      "response": "systemctl list-timers",
+      "explanation": "List all systemd timers",
+      "example": "systemctl list-timers"
+    },
+    {
+      "response": "systemctl list-timers --all",
+      "explanation": "List all timers including inactive",
+      "example": "systemctl list-timers --all"
+    },
+    {
+      "response": "systemctl enable <timer>",
+      "explanation": "Enable systemd timer",
+      "example": "systemctl enable backup.timer"
+    },
+    {
+      "response": "systemctl start <timer>",
+      "explanation": "Start systemd timer",
+      "example": "systemctl start backup.timer"
+    },
+    {
+      "response": "systemctl status <timer>",
+      "explanation": "Show timer status",
+      "example": "systemctl status backup.timer"
+    }
+  ]
+}

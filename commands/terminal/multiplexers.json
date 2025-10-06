@@ -1,0 +1,101 @@
+{
+  "screen": [
+    {
+      "response": "screen",
+      "explanation": "Start new screen session",
+      "example": "screen"
+    },
+    {
+      "response": "screen -S <name>",
+      "explanation": "Start named screen session",
+      "example": "screen -S mysession"
+    },
+    {
+      "response": "screen -ls",
+      "explanation": "List all screen sessions",
+      "example": "screen -ls"
+    },
+    {
+      "response": "screen -r <name>",
+      "explanation": "Reattach to screen session",
+      "example": "screen -r mysession"
+    },
+    {
+      "response": "screen -d -r <name>",
+      "explanation": "Detach and reattach to session",
+      "example": "screen -d -r mysession"
+    },
+    {
+      "response": "screen -X -S <name> quit",
+      "explanation": "Kill specific screen session",
+      "example": "screen -X -S mysession quit"
+    }
+  ],
+  "tmux": [
+    {
+      "response": "tmux",
+      "explanation": "Start new tmux session",
+      "example": "tmux"
+    },
+    {
+      "response": "tmux new -s <name>",
+      "explanation": "Start named tmux session",
+      "example": "tmux new -s mysession"
+    },
+    {
+      "response": "tmux ls",
+      "explanation": "List all tmux sessions",
+      "example": "tmux ls"
+    },
+    {
+      "response": "tmux attach -t <name>",
+      "explanation": "Attach to tmux session",
+      "example": "tmux attach -t mysession"
+    },
+    {
+      "response": "tmux detach",
+      "explanation": "Detach from current session (or Ctrl+b d)",
+      "example": "tmux detach"
+    },
+    {
+      "response": "tmux kill-session -t <name>",
+      "explanation": "Kill specific tmux session",
+      "example": "tmux kill-session -t mysession"
+    },
+    {
+      "response": "tmux split-window",
+      "explanation": "Split window horizontally (or Ctrl+b \")",
+      "example": "tmux split-window"
+    },
+    {
+      "response": "tmux split-window -h",
+      "explanation": "Split window vertically (or Ctrl+b %)",
+      "example": "tmux split-window -h"
+    },
+    {
+      "response": "tmux select-pane -t <n>",
+      "explanation": "Switch to pane N (or Ctrl+b arrow keys)",
+      "example": "tmux select-pane -t 1"
+    },
+    {
+      "response": "tmux new-window",
+      "explanation": "Create new window (or Ctrl+b c)",
+      "example": "tmux new-window"
+    },
+    {
+      "response": "tmux select-window -t <n>",
+      "explanation": "Switch to window N (or Ctrl+b 0-9)",
+      "example": "tmux select-window -t 1"
+    },
+    {
+      "response": "tmux rename-session -t <old> <new>",
+      "explanation": "Rename tmux session",
+      "example": "tmux rename-session -t old new"
+    },
+    {
+      "response": "tmux kill-server",
+      "explanation": "Kill all tmux sessions",
+      "example": "tmux kill-server"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "chmod": [
+    {
+      "response": "chmod <mode> <file>",
+      "explanation": "Change file permissions",
+      "example": "chmod 755 script.sh"
+    },
+    {
+      "response": "chmod +x <file>",
+      "explanation": "Add execute permission",
+      "example": "chmod +x script.sh"
+    },
+    {
+      "response": "chmod -x <file>",
+      "explanation": "Remove execute permission",
+      "example": "chmod -x script.sh"
+    },
+    {
+      "response": "chmod u+w <file>",
+      "explanation": "Add write permission for user",
+      "example": "chmod u+w file.txt"
+    },
+    {
+      "response": "chmod g+r <file>",
+      "explanation": "Add read permission for group",
+      "example": "chmod g+r file.txt"
+    },
+    {
+      "response": "chmod o-w <file>",
+      "explanation": "Remove write permission for others",
+      "example": "chmod o-w file.txt"
+    },
+    {
+      "response": "chmod -R <mode> <directory>",
+      "explanation": "Recursively change permissions",
+      "example": "chmod -R 755 /var/www"
+    }
+  ],
+  "chown": [
+    {
+      "response": "chown <user> <file>",
+      "explanation": "Change file owner",
+      "example": "chown john file.txt"
+    },
+    {
+      "response": "chown <user>:<group> <file>",
+      "explanation": "Change file owner and group",
+      "example": "chown john:developers file.txt"
+    },
+    {
+      "response": "chown -R <user> <directory>",
+      "explanation": "Recursively change ownership",
+      "example": "chown -R john /home/john"
+    }
+  ],
+  "chgrp": [
+    {
+      "response": "chgrp <group> <file>",
+      "explanation": "Change group ownership",
+      "example": "chgrp developers file.txt"
+    },
+    {
+      "response": "chgrp -R <group> <directory>",
+      "explanation": "Recursively change group",
+      "example": "chgrp -R developers /project"
+    }
+  ],
+  "umask": [
+    {
+      "response": "umask",
+      "explanation": "Display current file creation mask"
+    },
+    {
+      "response": "umask <mask>",
+      "explanation": "Set file creation mask",
+      "example": "umask 022"
+    }
+  ],
+  "sudo": [
+    {
+      "response": "sudo <command>",
+      "explanation": "Execute command as superuser",
+      "example": "sudo apt update"
+    },
+    {
+      "response": "sudo -u <user> <command>",
+      "explanation": "Execute command as specified user",
+      "example": "sudo -u www-data ls /var/www"
+    },
+    {
+      "response": "sudo -i",
+      "explanation": "Start interactive root shell",
+      "example": "sudo -i"
+    },
+    {
+      "response": "sudo !!",
+      "explanation": "Re-run previous command with sudo",
+      "example": "sudo !!"
+    }
+  ],
+  "su": [
+    {
+      "response": "su",
+      "explanation": "Switch to root user"
+    },
+    {
+      "response": "su <user>",
+      "explanation": "Switch to specified user",
+      "example": "su john"
+    },
+    {
+      "response": "su -",
+      "explanation": "Switch to root with root's environment",
+      "example": "su -"
+    }
+  ]
+}
