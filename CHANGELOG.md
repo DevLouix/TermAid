@@ -1,5 +1,42 @@
 # TermAid Changelog
 
+## Version 2.1.0 - C++ Implementation & New Features (2025-10-06)
+
+### 🎉 Major Additions
+
+**C++ Cross-Platform Version**
+- Complete C++ implementation for Linux, macOS, Windows
+- 10x faster than Python version
+- Single binary distribution
+- No runtime dependencies
+- CMake build system
+- See [CPP_BUILD.md](CPP_BUILD.md) for details
+
+**New Commands (16 added)**
+- Docker (28 commands) - Container management
+- Git (46 commands) - Version control
+- Kubernetes (25 commands) - Container orchestration
+- Screen/Tmux (19 commands) - Terminal multiplexers
+- Cron/At (11 commands) - Job scheduling
+- Iptables/UFW/Firewalld (27 commands) - Firewall management
+
+**New Features**
+- Command aliases support (list, add, remove)
+- Piped command explanation
+- Man page integration
+- Alias resolution in explanations
+- Enhanced command matching
+
+**Total Commands**: 170 (from 154)
+
+### 📊 Statistics
+
+- Python version: ~500 lines
+- C++ version: ~800 lines
+- Total commands: 170
+- Command categories: 13
+- Documentation files: 8
+
 ## Version 2.0.0 - Complete Rewrite (2025-10-05)
 
 ### 🎉 Major Changes

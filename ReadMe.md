@@ -2,6 +2,8 @@
 
 A comprehensive terminal assistant that logs, explains, and helps you understand Linux commands before and after execution.
 
+**Available in Python and C++ for maximum portability!**
+
 ## Features
 
 ✅ **140+ Linux Commands** - Comprehensive database covering:
@@ -28,7 +30,20 @@ A comprehensive terminal assistant that logs, explains, and helps you understand
 
 ## Installation
 
-### Quick Install
+### Choose Your Version
+
+**Python Version** (Recommended for full features):
+- Full feature set
+- Easy to modify
+- Cross-platform command execution
+
+**C++ Version** (Recommended for performance):
+- 10x faster
+- Single binary
+- No dependencies
+- Cross-platform (Linux, macOS, Windows)
+
+### Python Installation
 
 1. Clone the repository:
    ```bash
@@ -36,20 +51,38 @@ A comprehensive terminal assistant that logs, explains, and helps you understand
    cd TermAid
    ```
 
-2. Make the script executable:
+2. Run installation script:
    ```bash
-   chmod +x termaid.py
+   ./install.sh
    ```
 
-3. (Optional) Add to PATH for system-wide access:
+Or manually:
    ```bash
+   chmod +x termaid.py
    sudo ln -s $(pwd)/termaid.py /usr/local/bin/termaid
    ```
 
-### Requirements
+**Requirements**: Python 3.6 or higher
 
-- Python 3.6 or higher
-- Linux/Unix-based system
+### C++ Installation
+
+1. Clone the repository (if not already done)
+2. Build:
+   ```bash
+   ./build.sh
+   ```
+
+Or manually:
+   ```bash
+   mkdir build && cd build
+   cmake .. -DCMAKE_BUILD_TYPE=Release
+   cmake --build .
+   sudo cmake --install .
+   ```
+
+**Requirements**: CMake 3.15+, C++17 compiler
+
+See [CPP_BUILD.md](CPP_BUILD.md) for detailed C++ build instructions.
 
 ## Usage
 
